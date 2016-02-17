@@ -14,10 +14,10 @@ temp = imrotate(inpImg,rotationAngle,'nearest','crop');
 outImg = zeros(imSize);
 
 lbound1 = max(1,1+translation);
-ubound1 = min(imSize(2),imSize(2)+translation);
+ubound1 = min(imSize(1),imSize(1)+translation);
 
 lbound2 = max(1,1-translation);
-ubound2 = min(imSize(2),imSize(2)-translation);
+ubound2 = min(imSize(1),imSize(1)-translation);
 
 outImg(lbound1:ubound1,:)=temp(lbound2:ubound2,:);
 

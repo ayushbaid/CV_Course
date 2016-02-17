@@ -16,13 +16,13 @@ N = size(in1,2);
 
 prob = zeros(numBins,numBins);
 
+
 for i=1:M
     for j=1:N
         val1 = in1(i,j);
         val2 = in2(i,j);
         
         binIndex1=find(binEdges>val1,1)-1;
-        
         binIndex2=find(binEdges>val2,1)-1;
         
         prob(binIndex1,binIndex2)=prob(binIndex1,binIndex2)+1;
